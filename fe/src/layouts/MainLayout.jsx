@@ -1,9 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-const MainLayout = ({ children }) => (
+const MainLayout = () => (
     <div className="main-layout">
         <header>Main Header</header>
-        <main>{children}</main>
+        <main>
+            <Outlet />
+        </main>
     </div>
 );
 
