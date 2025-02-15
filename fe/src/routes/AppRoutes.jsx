@@ -6,6 +6,7 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import TestCharacter from '@/pages/TestCharacter';
 import Login from '@/pages/Login';
+import Quiz from '@/pages/Quiz';
 
 const AppRoutes = () => (
     <BrowserRouter>
@@ -15,6 +16,8 @@ const AppRoutes = () => (
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="testcharacter" element={<TestCharacter />}/>
+                <Route path="quiz" element={<Quiz />}/>
+
             </Route>
             <Route path='/login' element={<Login />} />
         </Routes>

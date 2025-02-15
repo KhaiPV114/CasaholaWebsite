@@ -1,0 +1,168 @@
+import { Button } from 'antd';
+import styled from 'styled-components';
+
+const StyledQuizContainer = styled.div`
+  min-height: 100vh;
+  background: #FF9422;
+  padding: 40px 20px;
+`;
+
+const QuizHeader = styled.div`
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+`;
+
+const QuestionCard = styled.div`
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const StyledButton = styled(Button)`
+  width: 250px;
+  height: 45px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #ff8c00;
+  border: none;
+  
+  &:hover {
+    background: #f0f0f0 !important;
+    color: #ff8c00 !important;
+  }
+
+  &:focus {
+    background: #f0f0f0 !important;
+    color: #ff8c00 !important;
+  }
+    &:disabled {
+    background: #ddd !important; /* Màu xám khi bị disable */
+    color: #aaa !important;
+    cursor: not-allowed;
+  }
+`;
+
+const StylePagButton = styled(Button)`
+display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #ff8c00;
+  border: none;
+  
+  &:hover {
+    background: #f0f0f0 !important;
+    color: #ff8c00 !important;
+  }
+
+  &:focus {
+    background: #f0f0f0 !important;
+    color: #ff8c00 !important;
+  }
+    &:disabled {
+    background: #ddd !important; /* Màu xám khi bị disable */
+    color: #aaa !important;
+    cursor: not-allowed;
+  }
+`
+
+const RadioContainer = styled.div`
+  margin-top: 20px;
+
+  .ant-radio-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .radio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100px;
+  }
+
+  .ant-radio-wrapper {
+    margin-right: 0;
+    padding: 0;
+    
+    .ant-radio {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
+    .ant-radio-inner {
+      width: 20px;
+      height: 20px;
+      background-color: #d9d9d9;
+      border: none;
+      border-radius: 50%;
+      
+      &::after {
+        display: none;
+      }
+    }
+
+    &.ant-radio-wrapper-checked .ant-radio-inner {
+      background-color: #ff8c00;
+    }
+  }
+
+  .radio-item:nth-child(3) .ant-radio-inner { 
+    transform: scale(2);
+  }
+
+  .radio-item:nth-child(2) .ant-radio-inner,
+  .radio-item:nth-child(4) .ant-radio-inner {
+    transform: scale(3);
+  }
+
+  .radio-item:nth-child(1) .ant-radio-inner,
+  .radio-item:nth-child(5) .ant-radio-inner {
+    transform: scale(4);
+  }
+
+  .radio-label {
+    font-size: 14px;
+    text-align: center;
+    max-width: 100px;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export { StyledQuizContainer, QuizHeader, QuestionCard, StyledButton, StylePagButton, RadioContainer, ButtonContainer };
