@@ -8,7 +8,7 @@ const { Header } = Layout
 
 export default function HeaderLayout() {
     return (
-        <Header className="header" align="center" style={{ backgroundColor: "white", width:"100%", }} >
+        <Header className="header" align="center" style={{ backgroundColor: "white", width:"100%" }} >
             <Flex justify="space-between" align="center" style={{ width: "100%" }}>
             <Space size="middle">
               <img src="/logof.png" alt="CasaHola Logo" style={{ height: "40px" }} />

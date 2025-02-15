@@ -11,7 +11,7 @@ const MainLayout = () => (
             <HeaderLayout />
             <Layout style={{ display: 'flex' }}>
                 <Navbar />
-                <main style={{ flexGrow: 1, marginLeft: '80px', padding: '20px', transition: 'margin-left 0.3s' }}>
+                <main style={{ flexGrow: 1, marginLeft: '80px', transition: 'margin-left 0.3s' }}>
                     <Outlet />
                 </main>
             </Layout>
