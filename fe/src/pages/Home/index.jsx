@@ -1,3 +1,5 @@
+
+import CustomNavbar from '@/components/Navbar';
 import React from 'react';
 import { Layout, Row, Col, Button, Typography, Flex, Card } from 'antd';
 import { CheckCircleOutlined, ClockCircleOutlined, UserOutlined } from '@ant-design/icons';
