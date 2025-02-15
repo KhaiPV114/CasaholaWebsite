@@ -1,4 +1,3 @@
-import CustomNavbar from '@/components/Navbar';
 import { Button, Col, Row, Typography } from 'antd';
 import React from 'react';
 
@@ -7,7 +6,6 @@ const { Title, Text } = Typography;
 const TestCharacter = () => {
     return (
         <div style={{ backgroundColor: '#fff', minHeight: '100vh' }}>
-            <CustomNavbar />
             <div style={{ height: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f0f0f0', marginBottom: '40px' }}>
                 <Text strong style={{ fontSize: '24px', color: '#666' }}>Chưa có ảnh</Text>
             </div>

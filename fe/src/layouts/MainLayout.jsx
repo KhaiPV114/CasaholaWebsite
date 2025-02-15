@@ -1,6 +1,6 @@
 import FooterLayout from '@/components/FooterLayout';
 import HeaderLayout from '@/components/HeaderLayout';
-import Navbar from '@/components/Navbar';
+import NavbarLayout from '@/components/NavbarLayout';
 import { Layout } from 'antd';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
@@ -11,7 +11,7 @@ const MainLayout = () => (
         <Layout>
             <HeaderLayout />
             <Layout style={{ display: 'flex' }}>
-                <Navbar />
+                <NavbarLayout />
                 <main style={{ flexGrow: 1, marginLeft: '80px', transition: 'margin-left 0.3s' }}>
                     <Outlet />
                 </main>

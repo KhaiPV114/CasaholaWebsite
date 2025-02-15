@@ -3,7 +3,7 @@ import Sider from "antd/es/layout/Sider";
 import React, { useState } from "react";
 import { BarChartOutlined, DatabaseOutlined, FileSearchOutlined, HomeOutlined, MessageOutlined } from "@ant-design/icons";
 
-const Navbar = () => {
+const NavbarLayout = () => {
     const [collapsed, setCollapsed] = useState(true);
 
     return (
@@ -26,4 +26,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavbarLayout;
