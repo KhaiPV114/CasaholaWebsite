@@ -5,6 +5,7 @@ import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import TestCharacter from '@/pages/TestCharacter';
+import Login from '@/pages/Login';
 
 const AppRoutes = () => (
     <BrowserRouter>
@@ -15,6 +16,7 @@ const AppRoutes = () => (
                 <Route path="contact" element={<Contact />} />
                 <Route path="testcharacter" element={<TestCharacter />}/>
             </Route>
+            <Route path='/login' element={<Login />} />
         </Routes>
     </BrowserRouter>
 );

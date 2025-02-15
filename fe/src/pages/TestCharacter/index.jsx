@@ -2,7 +2,7 @@ import { Button, Col, Row, Typography } from 'antd';
 import React from 'react';
 
 const { Title, Text } = Typography;
-
+ 
 const TestCharacter = () => {
     return (
         <div style={{ backgroundColor: '#fff', minHeight: '100vh' }}>
