@@ -1,22 +1,19 @@
-import FooterLayout from '@/components/FooterLayout';
+import Footer from '@/components/Footer';
 import HeaderLayout from '@/components/HeaderLayout';
 import NavbarLayout from '@/components/NavbarLayout';
 import { Layout } from 'antd';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import CustomHeader from "../components/Header";
-import CustomFooter from '@/components/Footer';
 const MainLayout = () => (
     <div className="main-layout">
         <Layout>
             <HeaderLayout />
-            <Layout style={{ display: 'flex' }}>
+            <Layout style={{ display: 'flex', flexGrow: 1, transition: 'margin-left 0.3s' }}>
                 <NavbarLayout />
-                <main style={{ flexGrow: 1, marginLeft: '80px', transition: 'margin-left 0.3s' }}>
-                    <Outlet />
-                </main>
+                <Outlet />
             </Layout>
-            <FooterLayout/>
+            <Footer />
+
         </Layout>
     </div>
 );

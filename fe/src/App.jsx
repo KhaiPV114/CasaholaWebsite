@@ -3,7 +3,9 @@ import { Provider } from 'react-redux';
 import { ConfigProvider } from 'antd';
 import { store } from './redux/store';
 import AppRoutes from './routes/AppRoutes';
-import 'antd/dist/reset.css';  
+import "@/assets/styles/global.scss";
+
+import 'antd/dist/reset.css';
 const App = () => (
   <Provider store={store}>
     <ConfigProvider theme={{ token: { colorPrimary: '#1890ff' } }}>

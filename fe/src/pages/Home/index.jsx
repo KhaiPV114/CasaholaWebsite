@@ -1,71 +1,106 @@
-
-import CustomNavbar from '@/components/Navbar';
 import React from 'react';
-import { Layout, Row, Col, Button, Typography, Flex, Card } from 'antd';
-import { CheckCircleOutlined, ClockCircleOutlined, UserOutlined } from '@ant-design/icons';
-import { Meta } from 'react-router-dom';
-
-const { Content } = Layout;
-const { Title, Paragraph } = Typography;
+import { Row, Col, Button } from 'antd';
+import { CheckCircleFilled, ClockCircleOutlined, UserOutlined } from '@ant-design/icons';
+import CustomCardHome from '@/components/CustomCardHome';
+import s from "@/pages/Home/styles.module.scss";
+import { Content } from 'antd/es/layout/layout';
+import Title from 'antd/es/typography/Title';
+import Paragraph from 'antd/es/typography/Paragraph';
+import CustomCardUser from '@/components/CustomCardUser';
 
 const Home = () => (
-    <Layout style={{ minHeight: '100vh', padding: "0px" }}>
-        <Content>
-            <Row gutter={24} style={{ paddingTop: "50px" }}>
-                <Col span={12} style={{ paddingLeft: "50px" }}>
-                    <Title level={1} style={{ color: '#ff6600', fontWeight: "bolder" }}>TÌM BẠN Ở GHÉP SIÊU CHẤT LƯỢNG!</Title>
-                    <Paragraph style={{ color: '#333' }}>
-                        Không còn nỗi lo ở ghép với người không phù hợp, đã có CasaHola giúp bạn.
-                    </Paragraph>
-                    <Button type="primary" size="large" style={{ backgroundColor: '#ff6600' }}>
-                        BẮT ĐẦU NGAY
-                    </Button>
-                    <Row style={{ marginTop: '20px' }}>
-                        <Flex vertical>
-                            <Col style={{ marginTop: "10px" }}>
-                                <CheckCircleOutlined style={{ color: '#ff6600', fontSize: '20px' }} /> Uy tín, chất lượng
-                            </Col >
-                            <Col style={{ marginTop: "10px" }}>
-                                <ClockCircleOutlined style={{ color: '#ff6600', fontSize: '20px' }} /> Ghép nối nhanh chóng, thuận tiện
-                            </Col>
-                            <Col style={{ marginTop: "10px" }}>
-                                <UserOutlined style={{ color: '#ff6600', fontSize: '20px' }} /> Bảo mật thông tin người dùng
-                            </Col>
-                        </Flex>
-                    </Row>
-                </Col>
-                <Col span={12} style={{ textAlign: 'center' }}>
-                    <img src="./Penguin.png" style={{ height: '400px' }} alt="Penguin" />
-                </Col>
-            </Row>
+    <Content>
+        <Row className={s.section}>
+            <Col span={12} className={s['section-left']}>
+                <Title level={1} className={s.title}>TÌM BẠN Ở GHÉP SIÊU CHẤT LƯỢNG!</Title>
+                <Paragraph className={s.description}>
+                    Không còn nỗi lo ở ghép với người không phù hợp, đã có CasaHola giúp bạn.
+                </Paragraph>
+                <Button className={s.button}>BẮT ĐẦU NGAY</Button>
 
-            <Row style={{ marginTop: '50px', backgroundColor: '#ff6600', padding: '30px' }}>
-                <Col span={24} style={{ textAlign: 'center' }}>
-                    <Title level={2} style={{ color: 'white' }}>TÍNH NĂNG TÌM BẠN Ở GHÉP CỦA CASAHOLA</Title>
-                    <Paragraph style={{ color: 'white', fontSize: "15px" }}>
-                        CASA HOLA dựa trên tính cách và nhu cầu cá nhân giúp bạn dễ dàng trong việc tìm kiếm bạn ở ghép trực tuyến!
-                    </Paragraph>
-                    <Row gutter={24} justify="center">
-                        <Col span={8}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="" src="./TestCharacter.png" />}
-                            >
-                                <Paragraph>TRẮC NGHIỆM TÍNH CÁCH MIỄN PHÍ</Paragraph>
-                            </Card>
-                        </Col>
-                        <Col span={8}>
-                            <Button type="primary" block>XÁC ĐỊNH YẾU TỐ TRONG BẢN ĐỒ SAO CÁ NHÂN</Button>
-                        </Col>
-                        <Col span={8}>
-                            <Button type="primary" block>LỌC NHU CẦU, GHÉP TÌM NHANH CHÓNG</Button>
-                        </Col>
-                    </Row>
+                <div className={s.features}>
+                    <div className={s['feature-item']}>
+                        <CheckCircleFilled style={{ color: '#19BD00', fontSize: '20px' }} />
+                        Uy tín, chất lượng
+                    </div>
+                    <div className={s['feature-item']}>
+                        <ClockCircleOutlined style={{ color: '#059AFF', fontSize: '20px' }} />
+                        Ghép nối nhanh chóng, thuận tiện
+                    </div>
+                    <div className={s['feature-item']}>
+                        <UserOutlined style={{ color: '#014766', fontSize: '20px' }} />
+                        Bảo mật thông tin người dùng
+                    </div>
+                </div>
+            </Col>
+            <Col span={12} style={{ textAlign: 'center' }}>
+                <img src="./Penguin.png" style={{ height: '400px' }} alt="Penguin" />
+            </Col>
+        </Row>
+
+        <Row className={s.featureSection}>
+            <Col span={24} className={s['featureSection-info']}>
+                <Title level={1} className={s.title}>TÍNH NĂNG TÌM BẠN Ở GHÉP CỦA CASAHOLA</Title>
+                <Paragraph className={s.description}>
+                    CASA HOLA dựa trên tính cách và nhu cầu cá nhân giúp bạn dễ dàng trong việc tìm kiếm <strong>BẠN Ở GHÉP</strong> trực tuyến!
+                </Paragraph>
+                <Row className={s.card}>
+                    <Col span={8}>
+                        <CustomCardHome url="./TestCharacter.png" title="TRẮC NGHIỆM TÍNH CÁCH MIỄN PHÍ" />
+                    </Col>
+                    <Col span={8}>
+                        <CustomCardHome url="./Feature2.png" title="XÁC ĐỊNH YẾU TỐ TRONG BẢN ĐỒ SAO CÁ NHÂN" />
+                    </Col>
+                    <Col span={8}>
+                        <CustomCardHome url="./Feature3.png" title="LỌC NHU CẦU, GHÉP TÌM NHANH CHÓNG" />
+                    </Col>
+                </Row>
+            </Col>
+        </Row>
+
+        <Row className={s.topSearch}>
+            <Col span={24}>
+                <Title level={1} className={s.topTitle}>TOP BẠN TRỌ ĐANG TÌM KIẾM</Title>
+                <Row className={s.profileUser}>
+
+                    <Col>
+                        <CustomCardUser image="./FA6002 (13).png"
+                            name="NGUYEN VAN A"
+                            school="FPTU, MC"
+                            location="Thôn 3, Tân Xã"
+                            description="Nhóm 4 - Người cá tính\nMọc Sư Tử, Sun Bảo Bình, Moon Nhân Mã\nNấu ăn, âm nhạc, game,... Xem thêm" />
+                    </Col>
+                    <Col >
+                        <CustomCardUser image="./FA6002 (13).png"
+                            name="NGUYEN VAN A"
+                            school="FPTU, MC"
+                            location="Thôn 3, Tân Xã"
+                            description="Nhóm 4 - Người cá tính\nMọc Sư Tử, Sun Bảo Bình, Moon Nhân Mã\nNấu ăn, âm nhạc, game,... Xem thêm" />
+                    </Col>
+                    <Col >
+                        <CustomCardUser image="./FA6002 (13).png"
+                            name="NGUYEN VAN A"
+                            school="FPTU, MC"
+                            location="Thôn 3, Tân Xã"
+                            description="Nhóm 4 - Người cá tính\nMọc Sư Tử, Sun Bảo Bình, Moon Nhân Mã\nNấu ăn, âm nhạc, game,... Xem thêm" />
+                    </Col>
+
+                </Row>
+
+            </Col>
+        </Row>
+        <div className={s.divider}></div>
+
+
+        <div className={s.cta}>
+            <Col><h1 className={s.title}>ROOMATE TÌM KHÔNG RA, CÓ CASAHOLA!</h1></Col>
+            <Col><button className={s.button}>TRẢI NGHIỆM NGAY</button>    </Col>
+            <Row>
+                <Col span={6}>                <img src="./Penguin.png" style={{ height: '200px' }} alt="Penguin" />
                 </Col>
             </Row>
-        </Content>
-    </Layout>
+        </div>
+    </Content>
 );
 
 export default Home;
