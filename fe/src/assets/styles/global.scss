@@ -2,7 +2,11 @@
 :root {
     --primary-color: #0099FF;
     --secondary-color: #FF7F00;
-    --secondary-gradient: linear-gradient(to right, #FF7F00, #FFAA00);
+    --secondary-gradient-toRight: linear-gradient(to right, #F95B01, #FFA101);
+    --secondary-gradient-toRight-hover: linear-gradient(to right, #FF7300, #FFC400);
+    --secondary-gradient-toLeft: linear-gradient(to left, #F95B01, #FFA101);
+    --secondary-gradient-toBottom: linear-gradient(to bottom, #F95B01, #FFA101);
+    --secondary-gradient-toTop: linear-gradient(to top, #F95B01, #FFA101);
     --background-color: #F5F5F5;
     --text-color: #333;
     --white-color: #FFFFFF;
