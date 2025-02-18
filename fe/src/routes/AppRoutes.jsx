@@ -7,6 +7,7 @@ import Contact from '@/pages/Contact';
 import TestCharacter from '@/pages/TestCharacter';
 import Login from '@/pages/Login';
 import ResultPage from '@/pages/TestResult';
+import Quiz from '@/pages/Quiz';
 
 const AppRoutes = () => (
     <BrowserRouter>
@@ -17,7 +18,7 @@ const AppRoutes = () => (
                 <Route path="contact" element={<Contact />} />
                 <Route path="testcharacter" element={<TestCharacter />} />
                 <Route path="result-page" element={<ResultPage />} />
-
+                <Route path="quiz" element={<Quiz />}/>
             </Route>
             <Route path='/login' element={<Login />} />
         </Routes>
