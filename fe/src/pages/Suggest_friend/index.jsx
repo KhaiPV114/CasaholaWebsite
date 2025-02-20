@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button, Row, Col, Typography, Tooltip, Image } from 'antd';
 import { CloseOutlined, HeartFilled, StarOutlined, MessageOutlined } from '@ant-design/icons';
-import './guess.scss';
+import './suggest.scss';
 
 const { Title, Paragraph } = Typography;
 

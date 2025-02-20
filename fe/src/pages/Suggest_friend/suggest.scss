@@ -32,17 +32,18 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 8px;
   flex: 1;
+  .ant-card-body {
+    padding: 0;
+  }
 }
 
-.profile-card .ant-card-body {
-  padding: 0;
-}
+
 
 
 .profile-cover {
   position: relative;
   height: 0;
-  padding-top: 120%;
+  padding-top: 130%;
   overflow: hidden;
 }
 
